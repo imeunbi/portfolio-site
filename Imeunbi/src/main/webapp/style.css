@@ -558,7 +558,7 @@ footer span a:hover{
 }
 @media print {
 	body{
-		width: 60vh;
+		width: 80vh;
 	}
 	
 	/*프린트시 배경 보이도록 */
