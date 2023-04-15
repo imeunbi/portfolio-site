@@ -193,6 +193,11 @@ section .title{
     color: #0174DF;
     background: none;
 }
+.home .home-content a:active{
+	color: #fff;
+    background: #BDBDBD;
+    border: 2px solid #BDBDBD;
+}
 #savePdf{
 	display: inline-block;
     background: #0174DF;
@@ -208,6 +213,11 @@ section .title{
 #savePdf:hover{
 	color: #0174DF;
     background: none;
+}
+#savePdf:active{
+	color: #fff;
+    background: #BDBDBD;
+    border: 2px solid #BDBDBD;
 }
 
 /*************** about section styling ***********/
@@ -306,6 +316,12 @@ section .title{
     color: #0174DF;
     background: none;
 }
+.skills .skills-content .left a:active{
+	color: #fff;
+    background: #BDBDBD;
+    border: 2px solid #BDBDBD;
+}
+
 .skills .skills-content .right .bars{
     margin-bottom: 15px;
 }
