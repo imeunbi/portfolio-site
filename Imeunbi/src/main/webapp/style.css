@@ -144,7 +144,7 @@ section .title{
 /************ home section styling **********/
 .home{
     display: flex;
-    height: 10vh;
+    /*height: 10vh;*/
     color: #424242;
     min-height: 500px;
     background-size: cover;
@@ -551,16 +551,22 @@ footer span a:hover{
     }
 }
 
-/********* 프린트 조건 ********/
-@page {
-	size:a4;
-	margin : 0;
+/********* 프린트 조건 *********/
+@page{
+	margin: 0;
+	size: A4;
 }
 @media print {
-	body{
-		width: 80vh;
+	.navbar{ /* 상단바 반복적으로 나오지 않도록 */
+    	position: static;
 	}
-	
+	.page{
+		width: 210mm;
+		height: 297mm;
+	}
+	body{
+		width: 100%;
+	}
 	/*프린트시 배경 보이도록 */
 	* { 
 		-webkit-print-color-adjust: exact;
