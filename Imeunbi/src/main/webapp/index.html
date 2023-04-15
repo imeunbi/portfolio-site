@@ -15,6 +15,7 @@
 	<link rel="short icon" href="#">
 </head>
 <body onload="showCurrentClock()">
+<div id="pdfDiv">
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
@@ -34,7 +35,7 @@
             </div>
         </div>
     </nav>
-
+	
     <!-- home section start -->
     <section class="home" id="home">
         <div class="max-width">
@@ -43,6 +44,8 @@
                 <div class="text-2">IM EUN BI</div>
                 <div class="text-3">And I'm a <span class="typing"></span></div>
                 <a href="#about">Hire me</a>
+                <a href="#about">Print A4</a>
+                <button type="button" class="btn btn-primary" id="savePdf" >Print A4 PDF</button>
             </div>
         </div>
     </section>
@@ -188,7 +191,9 @@
     <footer>
         <span>Created By EUNBI | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
     </footer>
-
     <script src="./script.js"></script>
+    <script src="./html2canvas.js"></script>
+	<script src="./jspdf.min.js"></script>
+    </div>
 </body>
 </html>

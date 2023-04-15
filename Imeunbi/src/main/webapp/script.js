@@ -75,7 +75,7 @@ $(function () {
         backSpeed: 30,
         loop: false
     });
-
+});
 
     // (owl carousel) 슬라이드 설정
     $('.carousel').owlCarousel({
@@ -104,5 +104,30 @@ $(function () {
     });
 
 
+//pdf 변환 후 a4 프린트
+$(document).ready(function() {
+	$('#savePdf').click(function() { // pdf저장 button id
+		
+	    html2canvas($('#pdfDiv')[0]).then(function(canvas) { //저장 영역 div id
+		
+	    // 캔버스를 이미지로 변환
+	    var imgData = canvas.toDataURL('image/png');
+	    var imgWidth = 210; // 이미지 가로 길이(mm) / A4 기준 210mm
+	    var pageHeight = imgWidth * 1.414;  // 출력 페이지 세로 길이 계산 A4 기준
+	    var imgHeight = canvas.height * imgWidth / canvas.width;
+	    var heightLeft = imgHeight;
+	    var margin = 0; // 출력 페이지 여백설정
+	    var doc = new jsPDF('p', 'mm');
+	    var position = 0;
+	       
+	    // 첫 페이지 출력
+	    doc.addImage(imgData, 'PNG', margin, position, imgWidth, imgHeight);
+	    heightLeft -= pageHeight;
+	         
+	    // 파일 저장
+	    doc.save('임은비_이력서_web.pdf');
+	});
 
+	});
+	
 });
