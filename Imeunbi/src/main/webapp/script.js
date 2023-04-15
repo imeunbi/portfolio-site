@@ -43,9 +43,9 @@ $(document).ready(function(){
         $('html').css("scrollBehavior", "auto");
     });
 
-//상단바 높이 구해서 내용 보이도록
+//상단바 높이 구해서 내용 다 보이도록
 $(function () {
-    $(".navbar .menu li a").on("click", function(){
+    $(".navbar .menu li a, .home .home-content a, .skills .skills-content .left a").on("click", function(){
         var headerHeight = $(".navbar").outerHeight();	//메뉴바 높이 구하기
         var href = $(this).attr("href");	//버튼 링크 찾기
         var target = $(href == "#" || href == "" ? "body" : href);	//링크 대상 돔 찾기
@@ -53,7 +53,6 @@ $(function () {
         $("html, body").animate({ scrollTop: position }, 200, "swing");	//이동 + 효과
     });
 });
-
 
     //사이드메뉴 - 화면 작은 사이즈일때
     $('.menu-btn').click(function(){
