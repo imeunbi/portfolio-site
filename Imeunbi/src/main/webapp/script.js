@@ -77,10 +77,6 @@ $(function () {
     });
 
 
-	var slide_element = document.getElementById('slideshow_element');
-	var slide_element_count = slide_element.children.length;
-	console.log(slide_element_count);
-	
     // (owl carousel) 슬라이드 설정
     $('.carousel').owlCarousel({
         margin: 20,
