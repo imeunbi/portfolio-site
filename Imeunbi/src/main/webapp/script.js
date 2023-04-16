@@ -111,11 +111,11 @@ $(document).ready(function() {
 		
 	    // 캔버스를 이미지로 변환
 	    var imgData = canvas.toDataURL('image/png');
-	    var imgWidth = 210; // 이미지 가로 길이(mm) / A4 기준 210mm
+	    var imgHeight = 297;
+	    var imgWidth = imgHeight*canvas.width/canvas.height; // 이미지 가로 길이(mm) //세로 길이에 맞춰서
 	    var pageHeight = imgWidth * 1.414;  // 출력 페이지 세로 길이 계산 A4 기준
-	    var imgHeight = canvas.height * imgWidth / canvas.width;
 	    var heightLeft = imgHeight;
-	    var margin = 0; // 출력 페이지 여백설정
+	    var margin = (210-(imgHeight*canvas.width/canvas.height))/2; // 출력 페이지 여백설정 (a4가로-content가로/2)
 	    var doc = new jsPDF('p', 'mm');
 	    var position = 0;
 	       
@@ -126,6 +126,8 @@ $(document).ready(function() {
 	    // 파일 저장
 	    doc.save('임은비_이력서_web.pdf');
 	});
+	
+	
 
 	});
 	
