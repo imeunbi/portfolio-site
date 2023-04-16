@@ -386,6 +386,13 @@ section .title{
 .teams .carousel .card:hover .text{
 	color: #fff;
 }
+.teams .carousel .card p{
+	color: #424242;
+	font-weight: 600;
+}
+.teams .carousel .card:hover p{
+	color: #fff;
+}
 .teams .carousel .card .box{
     display: flex;
     flex-direction: column;
