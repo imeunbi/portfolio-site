@@ -83,6 +83,18 @@ section .title{
     align-items: center;
     justify-content: space-between;
 }
+.navbar .logo a{
+    color: #0174DF;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: #424242;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #424242;
+}
 
 .navbar .menu li{
     list-style: none;
